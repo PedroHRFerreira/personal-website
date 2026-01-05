@@ -18,9 +18,7 @@ html {
 
 body,
 input,
-textarea,
-p,
-a {
+textarea {
   font-family: var(--font-inter), sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
@@ -41,6 +39,13 @@ a {
     radial-gradient(ellipse at 50% 50%, #0d0f12 0%, #0a0c0e 100%);
   background-color: #0a0c0e;
   background-attachment: fixed;
+}
+
+p,
+a {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 400;
+  color: #fff;
 }
 
 h1,

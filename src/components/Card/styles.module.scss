@@ -1,0 +1,56 @@
+$card-bg: rgba(13, 15, 18, 0.8);
+$card-content-bg: rgba(13, 15, 18, 0.95);
+$border-radius-outer: 12px;
+$border-radius-inner: 10px;
+$border-color-primary: #00ff88;
+$border-color-secondary: #00d4ff;
+$animation-duration: 4s;
+
+@mixin pseudo-element {
+  content: "";
+  position: absolute;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  background: $card-bg;
+  border-radius: $border-radius-outer;
+  padding: 2px;
+  overflow: hidden;
+
+  &::after {
+    @include pseudo-element;
+    inset: -2px;
+    border-radius: $border-radius-outer;
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      $border-color-primary 60deg,
+      $border-color-secondary 180deg,
+      $border-color-primary 300deg,
+      transparent 360deg
+    );
+    animation: rotateBorder $animation-duration linear infinite;
+    z-index: -1;
+  }
+
+  .cardContent {
+    position: relative;
+    background: $card-content-bg;
+    border-radius: $border-radius-inner;
+    padding: 32px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

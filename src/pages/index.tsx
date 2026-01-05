@@ -1,11 +1,10 @@
 import RootLayout from "@/layouts/RootLayout";
+import ServicesSection from "@/components/ServicesSection";
 
 export default function Home() {
   return (
     <RootLayout>
-      <article>
-        <h1>Tela de Home</h1>
-      </article>
+      <ServicesSection />
     </RootLayout>
   );
 }
