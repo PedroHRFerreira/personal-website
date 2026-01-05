@@ -43,9 +43,7 @@ const TechModal = ({ isOpen, onClose }: TechModalProps) => {
         </button>
 
         <div className={style.modal__header}>
-          <h2 className={style.modal__title}>
-            👋 Olá! Eu sou Pedro H. Rodrigues
-          </h2>
+          <h2 className={style.modal__title}>👋 Olá! Eu sou Pedro</h2>
           <AtomsText fontSize="1.125rem" color="#00ff88">
             {githubStats.role}
           </AtomsText>

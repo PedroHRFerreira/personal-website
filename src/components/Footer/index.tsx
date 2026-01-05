@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AtomsText from "@/components/Text/Index";
 import TechModal from "@/components/TechModal";
 import ProjectsFooter from "@/components/ProjectsFooter";
@@ -6,6 +6,15 @@ import style from "./styles.module.scss";
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <>
@@ -18,7 +27,7 @@ const Footer = () => {
             onClick={() => setIsModalOpen(true)}
           >
             <span className={style.footer__tech_icon}>💻</span>
-            Ver Tecnologias
+            Ver tecnologias
           </button>
         </div>
 
