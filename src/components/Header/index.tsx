@@ -5,15 +5,15 @@ const Header = () => {
   const links = [
     {
       name: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/PedroHRFerreira",
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/pedro-henrique-2ab9b6302/",
     },
     {
       name: "Instagram",
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/pedrohr_dev/",
     },
   ];
   return (
