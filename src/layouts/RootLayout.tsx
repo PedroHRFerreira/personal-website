@@ -8,10 +8,8 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <div>
-      <header>
-        <Header />
-      </header>
-      <main style={{ paddingBottom: "200px" }}>{children}</main>
+      <Header />
+      <main style={{ paddingTop: "32px" }}>{children}</main>
       <Footer />
     </div>
   );

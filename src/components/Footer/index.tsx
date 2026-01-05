@@ -18,7 +18,7 @@ const Footer = () => {
             onClick={() => setIsModalOpen(true)}
           >
             <span className={style.footer__tech_icon}>💻</span>
-            Ver Tecnologias
+            Ver tecnologias
           </button>
         </div>
 
